@@ -20,6 +20,14 @@ Then, send a message to localhost:
 
     $ mosquitto_pub -t foo -m 10 -q 0
 
+The server output should look something like:
+
+    ./auto/run 
+    2019/10/03 11:42:47 mqttshim started on 0.0.0.0:1883
+    msg: <Connect ClientID="mosq-uLOcLFQKaOnRWftpXQ" KeepAlive=60 Username="" Password="" CleanSession=true Will=nil Version=4>
+    msg: <Publish ID=0 Message=<Message Topic="foo" QOS=0 Retain=false Payload=[49 48]> Dup=false>
+    msg: <Disconnect>
+
 ## Helpful reading
 
 * https://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt/
